@@ -1,0 +1,1 @@
+export { default as PREDICTION_ARENA_ABI } from "@/lib/abi/PredictionStake.json";
