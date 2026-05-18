@@ -1,7 +1,7 @@
 "use client";
 
+const PredictionStakeABI = require("@/lib/abi/PredictionStake.json");
 import { BrowserProvider, Contract } from "ethers";
-import { PREDICTION_ARENA_ABI } from "@/constants/predictionArenaAbi";
 
 const CONTRACT_ADDRESS =
   process.env.NEXT_PUBLIC_DUNGEON_CONTRACT_ADDRESS!;
@@ -14,7 +14,7 @@ export async function getPredictionArenaContract() {
 
   return new Contract(
     CONTRACT_ADDRESS,
-    PREDICTION_ARENA_ABI,
+    PredictionStakeABI,
     signer
   );
 }
